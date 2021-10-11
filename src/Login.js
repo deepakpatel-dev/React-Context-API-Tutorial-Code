@@ -1,9 +1,17 @@
 import React from 'react'
+import { useStateValue } from './StateProvider';
 
 const Login = ({setUser}) => {
+    const [state,dispatch] = useStateValue();
+
     const loginToApp = () => {
         // Do Some login stuff
         // {props.setUser}
+       dispatch({
+           type: 'SET_USER',
+           user:"Deepak is here!"
+
+       })
     };
     return (
         <div>
